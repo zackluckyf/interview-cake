@@ -1,3 +1,3 @@
-hookup travis ci
+fix problems 5, continue coding the questions,
 
-fix problems 3 and 5, continue coding the questions
+implement travis CI
