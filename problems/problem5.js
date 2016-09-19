@@ -5,12 +5,11 @@ var change = (function() {
     'use strict';
     var options = 0;
     var makeChange = function(money, denominations) {
-        denominations.forEach(function(item) {
-            if (money % item === 0) {
-                options++;
-            }
-        });
-        return options;
+        function order(a, b) {
+            return b - a;
+        }
+        denominations.sort(order);
+        return money;
     };
 
     return {
