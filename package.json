@@ -4,11 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "http-server -a localhost -p 8000 -c-1 ./src &",
+    "stop": "killall -signal SIGINT",
+    "pretest": "npm install",
+    "test": "karma start karma.conf.js",
+    "test-single-run": "karma start karma.conf.js --single-run"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "http-server": "^0.9.0",
     "jasmine": "^2.5.1",
     "jasmine-core": "^2.5.1",
     "karma": "^1.3.0",
