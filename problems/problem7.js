@@ -43,9 +43,8 @@ var tempTracker = (function() {
         var count = 1;
         var temp = 1;
         var answer = 0;
-        var postition;
 
-        function spot(i) {
+        function position(i) {
             return i;
         }
         for (var i = 0; i < array.length - 1; i++) {
@@ -56,11 +55,10 @@ var tempTracker = (function() {
                 temp = 1;
             }
             if (answer < count) {
-                answer = count;
-                position = spot(i);
+                answer = position(i);
             }
         }
-        return array[position];
+        return array[answer];
     };
 
     return {
